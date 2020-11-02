@@ -23,7 +23,12 @@ class ApinasaApplicationTests {
     void planetsTests() {
         List<String> planets = this.restTemplate
                 .getForObject("http://localhost:" + port + "/planets", List.class);
+        Assertions.assertTrue(planets.size() == 7);
         Assertions.assertTrue(planets.contains("Tierra"));
+        Assertions.assertTrue(planets.contains("Marte"));
+        Assertions.assertTrue(planets.contains("Venus"));
+        Assertions.assertTrue(planets.contains("Mercurio"));
+        Assertions.assertTrue(planets.contains("Pluton"));
 
     }
 
