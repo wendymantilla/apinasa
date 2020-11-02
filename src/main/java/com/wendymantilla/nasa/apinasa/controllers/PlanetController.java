@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 public class PlanetController {
     
-    String [] planets = {"Earth","Mart","Jupiter","Saturno","Pluton", "Mercurio", "Venus"};
+    String [] planets = {"Tierra","Marte","Jupiter","Saturno","Pluton", "Mercurio", "Venus"};
 
 
     @GetMapping("/planets")
