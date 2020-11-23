@@ -1,5 +1,6 @@
 package com.wendymantilla.nasa.apinasa;
 
+import com.wendymantilla.nasa.apinasa.controllers.PlanetController;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,8 @@ class ApinasaApplicationTests {
     @Autowired
     private TestRestTemplate restTemplate;
 
-
+    @Autowired
+    PlanetController planetController;
 
     @Test
     void planetsTests() {
@@ -34,8 +36,14 @@ class ApinasaApplicationTests {
 
     }
 
+    void apiNasaTest(){
+
+
+    }
+
     @Test
     void contextLoads() {
+        Assertions.assertNotNull(planetController);
     }
 
 
